@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Design Reference
-https://basecamp.com/2986350/projects/17598060
+https://basecamp.com/2986350/projects/17598060 <br />
 
 [
-https://shathaalhothi936616.invisionapp.com/prototype/ckeu7cpt2001hm201l3my3zca/play
-username: webdevwdc@gmail.com
-password: Webskitters!1
+https://shathaalhothi936616.invisionapp.com/prototype/ckeu7cpt2001hm201l3my3zca/play <br />
+username: webdevwdc@gmail.com <br />
+password: Webskitters!1 <br />
 ]
 
 ## Available Scripts
