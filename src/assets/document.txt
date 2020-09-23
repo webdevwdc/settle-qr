@@ -6,3 +6,8 @@ https://shathaalhothi936616.invisionapp.com/prototype/ckeu7cpt2001hm201l3my3zca/
 username: webdevwdc@gmail.com
 password: Webskitters!1
 ]
+
+[
+    Git :
+    https://gitlab.webskitters.com/react-projects/settle-qr
+]

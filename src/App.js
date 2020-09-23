@@ -8,6 +8,7 @@ import GuestPayComponent from './Pages-Component/GuestPayComponent';
 import HomeComponent from './Pages-Component/HomeComponent';
 
 import QRComponent from './Pages-Component/Qr-Component';
+import ThankuPage from './Pages-Component/ThankuPage';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact><QRComponent /></Route>
-          <Route path="/home"><HomeComponent /></Route>
-          <Route path="/guest-pay"><GuestPayComponent /></Route>
+          <Route path="/home" exact><HomeComponent /></Route>
+          <Route path="/guest-pay" exact><GuestPayComponent /></Route>
+          <Route path="/thanks" exact><ThankuPage /></Route>
         </Switch>
 
       </Router>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import ImagePath from '../assets/ImagePath'
 import HeaderComponent from '../Share-Component/HeaderComponent'
 import HeroBannerComponent from '../Share-Component/HeroBannerComponent'
@@ -81,12 +82,12 @@ export default class GuestPayComponent extends Component {
                     <p className="text-dark1 font-weight-bold mb-2 pt-4">Select Your Payment Method</p>
                     <div className="d-flex justify-content-between">
                         <button className="btn btn-outline-secondary   btn-lg text-dark font-weight-bold rounded-8" style={{ width: '100px' }}>Other</button>
-                        <button className="btn btn-primary btn-lg text-white rounded-8" style={{ width: '100px' }}>
-                            <img  style={{height:'22px'}} src={ImagePath.applePay} alt={'Apple Pay'} />
-                        </button>
-                        <button className="btn btn-outline-secondary  btn-lg text-white rounded-8" style={{ width: '100px' }}>
-                            <img  style={{height:'22px'}} src={ImagePath.gPay} alt={'Google Pay'} />
-                        </button>
+                        <Link to="/thanks" className="btn btn-primary btn-lg text-white rounded-8" style={{ width: '100px' }}>
+                            <img style={{ height: '22px' }} src={ImagePath.applePay} alt={'Apple Pay'} />
+                        </Link>
+                        <Link to="/thanks" className="btn btn-outline-secondary  btn-lg text-white rounded-8" style={{ width: '100px' }}>
+                            <img style={{ height: '22px' }} src={ImagePath.gPay} alt={'Google Pay'} />
+                        </Link>
                     </div>
                 </div>
 
