@@ -57,15 +57,22 @@ a {
 button {
     transition: ease 0.3s;
 }
-.bottom-0{
+.bottom-0 {
     bottom: 0;
 }
-.left-0{
+.left-0 {
     left: 0;
 }
+.top-0 {
+    top: 0;
+}
 
-.rounded-8{
+.rounded-8 {
     border-radius: 8px;
+}
+
+header {
+    z-index: 100;
 }
 
 .heroBanner {
@@ -79,5 +86,28 @@ button {
     background-color: #bdbdbd;
     .btn {
         border-radius: 8px;
+    }
+}
+
+.sideMenuWrap {
+    left: -250px;
+    top: 0;
+    width: 250px;
+    z-index: 102;
+    transition:ease 0.3s;
+    &.active {
+        left: 0;
+    }
+}
+.sideMenuWrapMask {
+    background-color: rgba(#000000, 0.7);
+    z-index: 101;
+    opacity: 0;
+    pointer-events: none;
+    transition:ease 0.3s;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
     }
 }

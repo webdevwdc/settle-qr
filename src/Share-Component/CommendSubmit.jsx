@@ -24,30 +24,69 @@ export default class CommendSubmit extends Component {
 
         switch (this.state.modalContentType) {
             case "1":
-                Content = this.getContent();
-                // Content = 'sadadsa';
+                Content = this.Cheeseburger();
                 break;
 
             case "2":
-                Content = "B";
+                Content = this.Beer();
                 break;
 
             case "3":
-                Content = "C";
+                Content = this.Nachos();
                 break;
+
+            default:
+                Content = ''
+
+
         }
         return Content;
 
     }
 
-    getContent() {
+    Cheeseburger() {
         return (
-            <div>
-                <h1>Hello World</h1>
+            <div className="w-100 py-3">
+                <h5 className="text-dark1   text-center">Cheeseburger</h5>
+                <div className="text-center py-3">
+                    <StarRatingComponent />
+                </div>
+                <div className="d-flex justify-content-between">
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Close</button></div>
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Done</button></div>
+                </div>
             </div>
         )
+    };
 
+    Beer() {
+        return (
+            <div className="w-100 py-3">
+                <h5 className="text-dark1   text-center">Beer</h5>
+                <div className="text-center py-3">
+                    <StarRatingComponent />
+                </div>
+                <div className="d-flex justify-content-between">
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "2" })}>Close</button></div>
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "2" })}>Done</button></div>
+                </div>
+            </div>
+        )
+    };
 
+    Nachos() {
+        return (
+            <div className="w-100 py-3">
+                <h5 className="text-dark1   text-center">Nachos</h5>
+                <div className="text-center py-3">
+                    <StarRatingComponent />
+                </div>
+                <div className="d-flex justify-content-between">
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "3" })}>Close</button></div>
+                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "3" })}>Done</button></div>
+                </div>
+            </div>
+        )
     };
 
     render() {
@@ -68,18 +107,20 @@ export default class CommendSubmit extends Component {
                     </div>
                     <div className="pt-2">
                         <table className="table table-borderless font-weight-bold text-dark1">
-                            <tr>
-                                <td>Food</td>
-                                <td><StarRatingComponent /> </td>
-                            </tr>
-                            <tr>
-                                <td>Service</td>
-                                <td><StarRatingComponent /> </td>
-                            </tr>
-                            <tr>
-                                <td>Ambiance</td>
-                                <td><StarRatingComponent /> </td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td className="pl-0">Food</td>
+                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                </tr>
+                                <tr>
+                                    <td className="pl-0">Service</td>
+                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                </tr>
+                                <tr>
+                                    <td className="pl-0">Ambiance</td>
+                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 

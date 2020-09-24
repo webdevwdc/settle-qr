@@ -12,61 +12,63 @@ export default class GuestPayComponent extends Component {
                 <HeroBannerComponent />
                 <div className="p-4">
                     <table className="table  text-dark1 font-weight-bold table-borderless border border-secondary" style={{ 'fontSize': '12px' }}>
-                        <tr>
-                            <td className="p-2">
-                                1/4 Chicken wings
+                        <tbody>
+                            <tr>
+                                <td className="p-2">
+                                    1/4 Chicken wings
                             </td>
-                            <td className="p-2">
-                                $ 3.00
+                                <td className="p-2">
+                                    $ 3.00
                             </td>
-                        </tr>
-                        <tr>
-                            <td className="p-2">
-                                1 Cheeseburger
+                            </tr>
+                            <tr>
+                                <td className="p-2">
+                                    1 Cheeseburger
                             </td>
-                            <td className="p-2">
-                                $ 15.00
+                                <td className="p-2">
+                                    $ 15.00
                             </td>
-                        </tr>
-                        <tr>
-                            <td className="p-2">
-                                1/4 Beer pitcher
+                            </tr>
+                            <tr>
+                                <td className="p-2">
+                                    1/4 Beer pitcher
                             </td>
-                            <td className="p-2">
-                                $ 3.75
+                                <td className="p-2">
+                                    $ 3.75
                             </td>
-                        </tr>
+                            </tr>
 
 
 
-                        <tr className="border-top border-secondary">
-                            <td className="p-2">
-                                Tax
+                            <tr className="border-top border-secondary">
+                                <td className="p-2">
+                                    Tax
                             </td>
-                            <td className="p-2">
-                                $ 3.26
+                                <td className="p-2">
+                                    $ 3.26
                             </td>
-                        </tr>
-                        <tr>
-                            <td className="p-2">
-                                Subtotal
+                            </tr>
+                            <tr>
+                                <td className="p-2">
+                                    Subtotal
                             </td>
-                            <td className="p-2">
-                                $ 25.01
+                                <td className="p-2">
+                                    $ 25.01
                             </td>
-                        </tr>
+                            </tr>
 
 
-                        <tr className="border-top border-secondary" style={{ fontSize: '17px' }}>
-                            <td className="p-2">
-                                Total
+                            <tr className="border-top border-secondary" style={{ fontSize: '17px' }}>
+                                <td className="p-2">
+                                    Total
                             </td>
-                            <td className="p-2">
-                                $ 29.51
+                                <td className="p-2">
+                                    $ 29.51
                             </td>
-                        </tr>
+                            </tr>
 
 
+                        </tbody>
                     </table>
                 </div>
                 {/* Table Wraper End */}
