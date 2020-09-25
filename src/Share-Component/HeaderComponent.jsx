@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DefaultModal from '../Modals-Component'
+import LoginComponent from './LoginComponent'
 
 export default class HeaderComponent extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ export default class HeaderComponent extends Component {
         this.state = {
             isOpenMenu: false,
             showModal: false,
-            
+            bgcolor: '',
         }
     }
     onClose = () => {
@@ -32,7 +33,7 @@ export default class HeaderComponent extends Component {
                         <div className="list-group rounded-0 ">
                             <button
                                 className="list-group-item list-group-item-action font-weight-bold "
-                                onClick={() => this.setState({ showModal: true, isOpenMenu: false })} >Log in</button>
+                                onClick={() => this.setState({ showModal: true, isOpenMenu: false, bgcolor: 'none' })} >Log in</button>
                             <button className="list-group-item list-group-item-action font-weight-bold">Sign up</button>
                         </div>
 
@@ -49,7 +50,7 @@ export default class HeaderComponent extends Component {
                                             <small className="font-weight-bold">Joseph Eshaq</small> <br />
                                             <a className="d-block text-dark font-weight-bold" href="tel:+14185550100"><small className="font-weight-bold">+1 418 555-0100</small></a>
                                             <a className="d-inline-block text-dark font-weight-bold" href="mailto:jeshaq@gmail.com"><small className="font-weight-bold">jeshaq@gmail.com</small></a>
-                                            <a className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></a>
+                                            <a   className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -100,21 +101,10 @@ export default class HeaderComponent extends Component {
                     className={"sideMenuWrapMask  position-fixed w-100 h-100 top-0 left-0 " + (this.state.isOpenMenu ? 'active' : '')}
                     onClick={() => this.setState({ isOpenMenu: false })}></div>
 
-                <DefaultModal showModal={this.state.showModal} onClose={this.onClose.bind(this)}>
-                    <div className="text-center">
-                        <button className="btn rounded-8 btn-primary w-100">
-                            <h5 className="d-block mb-0">Create Account</h5>
-                            <small className="d-block">Save info for future payments</small>
-                        </button>
+                <DefaultModal showModal={this.state.showModal} onClose={this.onClose.bind(this)} containerStyle={{ 'backgroundColor': '#F2F2F2' }}>
 
-                        <button className="btn rounded-8 py-3 btn-dark2 w-100 my-4">
-                            <h5 className="d-block text-white mb-0">Check out as guest</h5>
-                        </button>
+                    <LoginComponent />
 
-                        <button className="btn rounded-8 btn-primary">
-                             Login
-                        </button>
-                    </div>
                 </DefaultModal>
             </>
         )

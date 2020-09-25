@@ -7,14 +7,14 @@ export default class PayableBillComponent extends Component {
             <>
                 <div className="pt-4">
                     <div className="px-3">
-                        <div class="form-group form-check">
+                        <div className="form-group form-check">
                             <input type="radio" className="form-check-input" id="exampleCheck1" />
                             <label className="form-check-label font-weight-bold text-dark1" htmlFor="exampleCheck1">Select all</label>
                         </div>
                     </div>
                     <hr />
                     <div className="px-3">
-                        <div class="form-group form-check">
+                        <div className="form-group form-check">
                             <input type="radio" className="form-check-input" id="exampleCheck2" />
                             <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck2">
                                 <span>Seat 1</span>
@@ -23,21 +23,21 @@ export default class PayableBillComponent extends Component {
                         </div>
 
                         <div className="px-4">
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck3" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck3">
                                     <span>1/4 Chicken wings</span>
                                     <span>$ 3.00</span>
                                 </label>
                             </div>
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck4" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck4">
                                     <span>1 Cheeseburger</span>
                                     <span>$ 15.00</span>
                                 </label>
                             </div>
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck5" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck5">
                                     <span>1/4 Beer pitcher</span>
@@ -49,7 +49,7 @@ export default class PayableBillComponent extends Component {
                     {/* Seat end */}
                     <hr />
                     <div className="px-3">
-                        <div class="form-group form-check">
+                        <div className="form-group form-check">
                             <input type="radio" className="form-check-input" id="exampleCheck2" />
                             <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck2">
                                 <span>Seat 2</span>
@@ -58,21 +58,21 @@ export default class PayableBillComponent extends Component {
                         </div>
 
                         <div className="px-4">
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck3" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck3">
                                     <span>1/4 Chicken wings</span>
                                     <span>$ 3.00</span>
                                 </label>
                             </div>
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck4" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck4">
                                     <span>1 Cheeseburger</span>
                                     <span>$ 15.00</span>
                                 </label>
                             </div>
-                            <div class="form-group form-check">
+                            <div className="form-group form-check">
                                 <input type="radio" className="form-check-input" id="exampleCheck5" />
                                 <label className="form-check-label font-weight-bold text-dark d-flex align-items-center justify-content-between" htmlFor="exampleCheck5">
                                     <span>1/4 Beer pitcher</span>

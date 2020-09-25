@@ -3,6 +3,8 @@ $theme-colors: (
     "primary": #e44d26,
     "secondary": #bdbdbd,
     "darkDeep": #000000,
+    "success": #00df72,
+    "blue": #39f,
     "dark": #333333,
     "dark1": #4f4f4f,
     "dark2": #808080,
@@ -17,7 +19,6 @@ $grid-breakpoints: (
     xxl: 1440px,
     xxxl: 1600px,
 ) !default;
-
 /* import bootstrap to set changes */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 @import "~bootstrap/scss/bootstrap";
@@ -66,6 +67,9 @@ button {
 .top-0 {
     top: 0;
 }
+.right-0 {
+    right: 0;
+}
 
 .rounded-8 {
     border-radius: 8px;
@@ -94,7 +98,7 @@ header {
     top: 0;
     width: 250px;
     z-index: 102;
-    transition:ease 0.3s;
+    transition: ease 0.3s;
     &.active {
         left: 0;
     }
@@ -104,7 +108,7 @@ header {
     z-index: 101;
     opacity: 0;
     pointer-events: none;
-    transition:ease 0.3s;
+    transition: ease 0.3s;
     &.active {
         opacity: 1;
         pointer-events: all;
