@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import DefaultModal from '../Modals-Component'
+import CreateAccount from './CreateAccount'
 import LoginComponent from './LoginComponent'
 
 export default class HeaderComponent extends Component {
@@ -8,12 +9,14 @@ export default class HeaderComponent extends Component {
         this.state = {
             isOpenMenu: false,
             showModal: false,
-            bgcolor: '',
+            chooseLoginRegister: '',
         }
     }
     onClose = () => {
         this.setState({ showModal: false })
     }
+
+
 
     render() {
         return (
@@ -33,11 +36,12 @@ export default class HeaderComponent extends Component {
                         <div className="list-group rounded-0 ">
                             <button
                                 className="list-group-item list-group-item-action font-weight-bold "
-                                onClick={() => this.setState({ showModal: true, isOpenMenu: false, bgcolor: 'none' })} >Log in</button>
-                            <button className="list-group-item list-group-item-action font-weight-bold">Sign up</button>
+                                onClick={() => this.setState({ showModal: true, isOpenMenu: false, chooseLoginRegister: 'login' })} >Log in</button>
+
+                            <button className="list-group-item list-group-item-action font-weight-bold" onClick={() => this.setState({ showModal: true, isOpenMenu: false, chooseLoginRegister: 'createAccount' })}>Sign up</button>
                         </div>
 
-                        <div className="userDetails d-none">
+                        <div className="userDetails d-none-">
                             <table className="table table-borderless">
                                 <tbody>
                                     <tr>
@@ -50,10 +54,10 @@ export default class HeaderComponent extends Component {
                                             <small className="font-weight-bold">Joseph Eshaq</small> <br />
                                             <a className="d-block text-dark font-weight-bold" href="tel:+14185550100"><small className="font-weight-bold">+1 418 555-0100</small></a>
                                             <a className="d-inline-block text-dark font-weight-bold" href="mailto:jeshaq@gmail.com"><small className="font-weight-bold">jeshaq@gmail.com</small></a>
-                                            <a   className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></a>
+                                            <a className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></a>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr onClick={event => window.location.href = '/payment-methods'}>
                                         <td>
                                             <span className="material-icons">
                                                 credit_card
@@ -88,7 +92,7 @@ export default class HeaderComponent extends Component {
 
                         </div>
 
-                        <div className="list-group rounded-0 d-none">
+                        <div className="list-group rounded-0 d-none-">
                             <button className="list-group-item list-group-item-action font-weight-bold">Sign out</button>
                         </div>
 
@@ -102,8 +106,10 @@ export default class HeaderComponent extends Component {
                     onClick={() => this.setState({ isOpenMenu: false })}></div>
 
                 <DefaultModal showModal={this.state.showModal} onClose={this.onClose.bind(this)} containerStyle={{ 'backgroundColor': '#F2F2F2' }}>
+                    {(this.state.chooseLoginRegister === 'login') ? <LoginComponent /> : null}
 
-                    <LoginComponent />
+                    {(this.state.chooseLoginRegister === 'createAccount') ? <CreateAccount /> : null}
+
 
                 </DefaultModal>
             </>

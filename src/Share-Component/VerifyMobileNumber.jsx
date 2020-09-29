@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 
 export default class VerifyMobileNumber extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModal: false
+        }
+
+    }
+
+    onClose() {
+        this.setState({ showModal: false })
+    }
+
+
     render() {
         return (
             <>
@@ -24,7 +37,7 @@ export default class VerifyMobileNumber extends Component {
                                 </div>
                             </div>
                             <div className="col-md-12 text-center">
-                                <button className="btn btn-primary btn-sm rounded-8 px-4">Confirm</button>
+                                <button type="button" className="btn btn-primary btn-sm rounded-8 px-4" onClick={this.onClose.bind(this)}  >Confirm</button>
                             </div>
                             <div className="col-md-12">
                                 <p><small>If you have not recieved a code, click <a href="#" className="font-weight-bold">here</a> to recieve another one</small></p>

@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import ImagePath from '../assets/ImagePath'
+import HeaderComponent from './HeaderComponent'
 
 export default class PaymentMethods extends Component {
     render() {
         return (
             <>
+            <HeaderComponent />
                 <div>
                     <h5 className="text-dark1 text-center font-weight-bold mb-5">Payment methods</h5>
                     <table className="table table-borderless">

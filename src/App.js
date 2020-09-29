@@ -9,6 +9,7 @@ import HomeComponent from './Pages-Component/HomeComponent';
 
 import QRComponent from './Pages-Component/Qr-Component';
 import ThankuPage from './Pages-Component/ThankuPage';
+import PaymentMethods from './Share-Component/PaymentMethods';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="/home" exact><HomeComponent /></Route>
           <Route path="/guest-pay" exact><GuestPayComponent /></Route>
           <Route path="/thanks" exact><ThankuPage /></Route>
-        </Switch>
+          <Route path="/payment-methods" exact><PaymentMethods /></Route>
+         </Switch>
 
       </Router>
     </>
