@@ -22,8 +22,9 @@ export default class StarRatingComponent extends Component {
                 <StarRatings
                     rating={this.state.rating}
                     starRatedColor="#FFC107"
+                    starHoverColor="#FFC107"
                     changeRating={this.changeRating.bind(this)}
-                    numberOfStars={6}
+                    numberOfStars={5}
                     name='rating'
                     starDimension='20px'
                 />

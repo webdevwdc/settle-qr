@@ -23,12 +23,15 @@ export default class VerifyMobileNumber extends Component {
                     <p className="text-dark1 text-center mb-4"><small className="font-weight-bold">Enter 6 digit verification code sent to your phone</small></p>
 
                     <form>
-                        <div className="row justify-content-around">
+                        <div className="row justify-content-center">
                             <div className="col-4">
                                 <div className="form-group">
                                     <input type="text" placeholder=" " className="form-control shadow-none rounded-8" />
                                     <small className="form-text text-muted d-none">We'll never share your email with anyone else.</small>
                                 </div>
+                            </div>
+                            <div className="col-auto px-0 pt-1">
+                                <span className="material-icons  align-middle">remove</span>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">

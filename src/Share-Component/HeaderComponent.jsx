@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import DefaultModal from '../Modals-Component'
 import CreateAccount from './CreateAccount'
 import LoginComponent from './LoginComponent'
@@ -22,7 +23,10 @@ export default class HeaderComponent extends Component {
         return (
             <>
                 <header className="position-sticky top-0 left-0 bg-white">
-                    <div className="d-flex justify-content-end py-2 px-3">
+                    <div className="d-flex justify-content-between py-2 px-3">
+                        <div className="backBtn ">
+                           <Link to="/home"><i className="material-icons text-dark2  align-middle">chevron_left</i></Link>
+                        </div>
                         <div className="hamBergerBtn" onClick={() => this.setState({ isOpenMenu: !this.state.isOpenMenu })}>
                             <i className="material-icons align-middle">menu</i>
                         </div>

@@ -25,7 +25,9 @@ export default class LoginComponent extends Component {
                                 <div className="col-4 pr-0">
                                     <div className="form-group">
                                         <select className="form-control shadow-none rounded-8 px-1">
+                                        <option value="US +1" >US +1</option>
                                             {phoneUrl.map((list, index) => (
+                                                
                                                 <option value="" key={index}>{list.code} {list.dial_code}</option>
                                             ))}
 

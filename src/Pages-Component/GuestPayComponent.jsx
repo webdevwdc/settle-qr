@@ -86,7 +86,7 @@ export default class GuestPayComponent extends Component {
                     <h5 className="text-dark1 font-weight-bold">Tip</h5>
                     <div className="d-flex justify-content-between">
                         <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>15%</button>
-                        <button className="btn btn-primary btn-lg text-white rounded-8" style={{ width: '94px' }}>18%</button>
+                        <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>18%</button>
                         <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>Other</button>
                     </div>
 
@@ -100,7 +100,7 @@ export default class GuestPayComponent extends Component {
                     <div className="d-flex flex-wrap justify-content-between pb-5">
                         <button className="btn mb-3 btn-outline-secondary    btn-lg text-dark font-weight-bold rounded-8" onClick={() => this.setState({ isOtherPayment: !this.state.isOtherPayment })} style={{ width: '80px', fontSize: '1rem' }}>Other</button>
                         <button className="btn mb-3 btn-outline-secondary   btn-lg text-dark font-weight-bold rounded-8 " style={{ width: 'auto', fontSize: '1rem' }}>Pay with Visa ***** 4819</button>
-                        <Link to="/thanks" className="btn mb-3 btn-primary btn-lg text-white rounded-8" style={{ width: '100px' }}>
+                        <Link to="/thanks" className="btn mb-3 btn-deep-dark btn-lg text-white rounded-8" style={{ width: '100px' }}>
                             <img style={{ height: '20px' }} src={ImagePath.applePay} alt={'Apple Pay'} />
                         </Link>
                         <Link to="/thanks" className="btn mb-3 btn-outline-secondary  btn-lg text-white rounded-8" style={{ width: '100px' }}>

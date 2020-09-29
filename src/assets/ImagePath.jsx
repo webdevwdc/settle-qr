@@ -4,6 +4,7 @@ const ImagePath = {
     applePay: require('./images/applePay.png'),
     visa: require('./images/visa.png'),
     master: require('./images/mastercard.png'),
+    LittleStar: require('./images/shapes-star.png'),
 
     img1: require('./images/img1.png'),
     img2: require('./images/img2.png'),

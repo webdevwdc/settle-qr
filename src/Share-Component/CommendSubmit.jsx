@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import StarRatingComponent from './StarRatingComponent'
 
 import DefaultModal from "../Modals-Component"
+import ImagePath from '../assets/ImagePath'
 
 
 
@@ -11,7 +12,7 @@ export default class CommendSubmit extends Component {
         super(props)
         this.state = {
             showModal: false,
-            modalContentType: ""
+            modalContentType: "",
         }
     }
 
@@ -96,13 +97,16 @@ export default class CommendSubmit extends Component {
                     <h6 className="font-weight-bold text-dark1">Rate your favorite dishes</h6>
                     <div className="d-flex justify-content-between">
                         <div>
-                            <button style={{ width: '100px', fontSize: '12px', padding: '12px 0' }} className="btn rounded-8   btn-primary" onClick={() => this.setState({ showModal: true, modalContentType: "1" })}>Cheeseburger</button>
+                            <button style={{ width: '100px', fontSize: '10px', padding: '15px 0' }} className="btn rounded-8   btn-primary position-relative" onClick={() => this.setState({ showModal: true, modalContentType: "1" })}>
+                                <span className={'d-block'}>Cheeseburger</span>
+                                <span className={'d-block position-absolute text-center w-100  left-0 bottom-0'}  ><img src={ImagePath.LittleStar} alt="" /> 5</span>
+                            </button>
                         </div>
                         <div>
-                            <button style={{ width: '100px', fontSize: '12px', padding: '12px 0' }} className="btn rounded-8   btn-primary" onClick={() => this.setState({ showModal: true, modalContentType: "2" })}>Beer</button>
+                            <button style={{ width: '100px', fontSize: '10px', padding: '15px 0' }} className="btn rounded-8   btn-primary" onClick={() => this.setState({ showModal: true, modalContentType: "2" })}>Beer</button>
                         </div>
                         <div>
-                            <button style={{ width: '100px', fontSize: '12px', padding: '12px 0' }} className="btn rounded-8   btn-primary" onClick={() => this.setState({ showModal: true, modalContentType: "3" })}>Nachos</button>
+                            <button style={{ width: '100px', fontSize: '10px', padding: '15px 0' }} className="btn rounded-8   btn-primary" onClick={() => this.setState({ showModal: true, modalContentType: "3" })}>Nachos</button>
                         </div>
                     </div>
                     <div className="pt-2">

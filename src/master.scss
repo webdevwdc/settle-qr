@@ -5,6 +5,7 @@ $theme-colors: (
     "darkDeep": #000000,
     "success": #00df72,
     "blue": #39f,
+    "deep-dark": #000,
     "dark": #333333,
     "dark1": #4f4f4f,
     "dark2": #808080,
@@ -70,12 +71,17 @@ button {
 .right-0 {
     right: 0;
 }
-.form-control{
+.form-control {
     font-size: 12px;
+    outline: none !important;
 }
 
 .rounded-8 {
     border-radius: 8px;
+}
+
+.container {
+    max-width: 1024px;
 }
 
 header {
