@@ -25,7 +25,7 @@ export default class HeaderComponent extends Component {
                 <header className="position-sticky top-0 left-0 bg-white">
                     <div className="d-flex justify-content-between py-2 px-3">
                         <div className="backBtn ">
-                           <Link to="/home"><i className="material-icons text-dark2  align-middle">chevron_left</i></Link>
+                            <Link to="/home"><i className="material-icons text-dark2  align-middle">chevron_left</i></Link>
                         </div>
                         <div className="hamBergerBtn" onClick={() => this.setState({ isOpenMenu: !this.state.isOpenMenu })}>
                             <i className="material-icons align-middle">menu</i>

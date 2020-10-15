@@ -37,7 +37,9 @@ export default class PaymentMethods extends Component {
                     </table>
 
                     <div className="mb-4 px-2">
-                        <button className="btn btn-outline-blue border-0 font-weight-bold shadow-none" onClick={() => this.setState({ isAddCardOpen: !this.state.isAddCardOpen })} >+ Add payment method</button>
+                        <button className="btn btn-outline-blue border-0 font-weight-bold shadow-none" onClick={() => this.setState({ isAddCardOpen: !this.state.isAddCardOpen })} >
+                            {this.state.isAddCardOpen !== true ? <><span class="material-icons align-middle"> add </span></> : <><span class="material-icons align-middle">  remove</span></>}
+                         Add payment method</button>
                     </div>
 
                     {this.state.isAddCardOpen ?

@@ -15,8 +15,10 @@ export default class StarRatingComponent extends Component {
             rating: newRating
         });
     }
-    render() {
+    componentDidMount() {
 
+    }
+    render() {
         return (
             <>
                 <StarRatings
@@ -26,7 +28,9 @@ export default class StarRatingComponent extends Component {
                     changeRating={this.changeRating.bind(this)}
                     numberOfStars={5}
                     name='rating'
-                    starDimension='20px'
+                    starSpacing="12px"
+                    starDimension="22px"
+
                 />
             </>
         )

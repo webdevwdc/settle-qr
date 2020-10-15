@@ -46,15 +46,27 @@ export default class CommendSubmit extends Component {
     }
 
     Cheeseburger() {
+
         return (
             <div className="w-100 py-3">
                 <h5 className="text-dark1   text-center">Cheeseburger</h5>
-                <div className="text-center py-3">
+                <div className="text-center py-3 contWidthStar">
                     <StarRatingComponent />
+                    <ul className="list-unstyled d-flex  " style={{ fontSize: '9px' }}>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Not good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Edible</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Yummy</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Mouthwatering</li>
+                    </ul>
                 </div>
                 <div className="d-flex justify-content-between">
-                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Close</button></div>
-                    <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Done</button></div>
+                    <div><button
+                        className="btn btn-sm font-weight-bold text-dark2 p-0"
+                        onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Close</button></div>
+                    <div><button
+                        className="btn btn-sm font-weight-bold text-dark2 p-0"
+                        onClick={() => this.setState({ showModal: false, modalContentType: "1" })}>Done</button></div>
                 </div>
             </div>
         )
@@ -64,8 +76,15 @@ export default class CommendSubmit extends Component {
         return (
             <div className="w-100 py-3">
                 <h5 className="text-dark1   text-center">Beer</h5>
-                <div className="text-center py-3">
+                <div className="text-center py-3 contWidthStar">
                     <StarRatingComponent />
+                    <ul className="list-unstyled d-flex  " style={{ fontSize: '9px' }}>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Not good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Edible</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Yummy</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Mouthwatering</li>
+                    </ul>
                 </div>
                 <div className="d-flex justify-content-between">
                     <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "2" })}>Close</button></div>
@@ -79,8 +98,15 @@ export default class CommendSubmit extends Component {
         return (
             <div className="w-100 py-3">
                 <h5 className="text-dark1   text-center">Nachos</h5>
-                <div className="text-center py-3">
+                <div className="text-center py-3 contWidthStar">
                     <StarRatingComponent />
+                    <ul className="list-unstyled d-flex  " style={{ fontSize: '9px' }}>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Not good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Edible</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Good</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Yummy</li>
+                        <li style={{ width: '60px', textAlign: 'center' }}>Mouthwatering</li>
+                    </ul>
                 </div>
                 <div className="d-flex justify-content-between">
                     <div><button className="btn btn-sm font-weight-bold text-dark2 p-0" onClick={() => this.setState({ showModal: false, modalContentType: "3" })}>Close</button></div>
@@ -114,15 +140,15 @@ export default class CommendSubmit extends Component {
                             <tbody>
                                 <tr>
                                     <td className="pl-0">Food</td>
-                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                    <td className="pr-0  flex-grow-1"><StarRatingComponent /> </td>
                                 </tr>
                                 <tr>
                                     <td className="pl-0">Service</td>
-                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                    <td className="pr-0  flex-grow-1"><StarRatingComponent /> </td>
                                 </tr>
                                 <tr>
                                     <td className="pl-0">Ambiance</td>
-                                    <td className="pr-0 text-right"><StarRatingComponent /> </td>
+                                    <td className="pr-0  flex-grow-1"><StarRatingComponent /> </td>
                                 </tr>
                             </tbody>
                         </table>

@@ -124,3 +124,19 @@ header {
         cursor: pointer;
     }
 }
+
+.contWidthStar {
+    .star-ratings {
+        display: block;
+        .star-container {
+            width: 60px;
+            text-align: center;
+            padding: 0 !important;
+            text-align: center;
+            svg {
+                width: 30px !important;
+                height: 30px !important;
+            }
+        }
+    }
+}
