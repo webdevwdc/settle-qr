@@ -17,7 +17,7 @@ export default class CreateAccount extends Component {
             <>
                 {(this.state.isOtpOpen === false) ?
                     <div>
-                        <h5 className="text-dark1 text-center font-weight-bold">Create Your Account</h5>
+                        <h5 className="text-dark1 text-center font-weight-bold">Create your account</h5>
                         <form noValidate>
                             <div className="row">
                                 <div className="col-6">
@@ -51,11 +51,11 @@ export default class CreateAccount extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-12">
-                                    <p><small>We will send a text with a verification code. Message and data rates may apply</small></p>
+                                    <p><small>We will send you a text with a verification code. Message and data rates may apply.</small></p>
                                 </div>
                                 <div className="col-12">
                                     <div className="form-group">
-                                        <input type="text" placeholder="email" className="form-control shadow-none rounded-8" />
+                                        <input type="text" placeholder="Email" className="form-control shadow-none rounded-8" />
                                         <small className="form-text text-muted d-none">We'll never share your email with anyone else.</small>
                                     </div>
                                 </div>

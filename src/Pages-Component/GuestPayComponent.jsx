@@ -10,6 +10,8 @@ export default class GuestPayComponent extends Component {
         super(props);
         this.state = {
             isOtherPayment: false,
+            isDollarPercent: 'percent',
+            isOpenOtherTip: false,
         }
     }
 
@@ -87,8 +89,37 @@ export default class GuestPayComponent extends Component {
                     <div className="d-flex justify-content-between">
                         <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>15%</button>
                         <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>18%</button>
-                        <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>Other</button>
+                        <button className="btn btn-dark2 btn-lg text-white rounded-8"
+                            style={{ width: '94px' }}
+                            onClick={() => this.setState({ isOpenOtherTip: !this.state.isOpenOtherTip })}
+                        >Other</button>
                     </div>
+                    {this.state.isOpenOtherTip === true ?
+                        <div className="pt-4">
+                            <div className="d-flex justify-content-between align-items-center">
+                                <div className="d-flex border rounded-8">
+                                    <button
+                                        className={"btn px-4 shadow-none " + (this.state.isDollarPercent === 'percent' ? 'btn-primary' : '')}
+                                        onClick={() => this.setState({ isDollarPercent: 'percent' })}
+                                    >%</button>
+                                    <button
+                                        className={"btn px-4 shadow-none " + (this.state.isDollarPercent === 'dollar' ? 'btn-primary' : '')}
+                                        onClick={() => this.setState({ isDollarPercent: 'dollar' })}
+                                    >$</button>
+                                </div>
+                                <div>
+                                    <input type="number"
+                                        placeholder="0"
+                                        disabled={(this.state.isDollarPercent === 'percent' ? 'disabled' : '')}
+                                        defaultValue="0" className="form-control text-center font-weight-bold h-auto py-2 shadow-none" style={{ width: "70px" }} />
+                                </div>
+                            </div>
+                        </div>
+
+                        : null
+
+                    }
+
 
                     <p className="text-dark1 font-weight-bold mb-2 pt-4">Select Your Payment Method</p>
 
