@@ -31,7 +31,9 @@ export default class OrderHistory extends Component {
                     </table>
                 </div>
                 <div className="text-center">
-                    <button className="btn btn-primary rounded-8 shadow-none">View Receipt</button>
+                    <button className="btn btn-primary rounded-8 shadow-none"
+                        onClick={() => window.location.href = '/receipt'}
+                    >View Receipt</button>
                 </div>
             </div>
         )

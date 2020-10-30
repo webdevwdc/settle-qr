@@ -43,7 +43,7 @@ export default class PaymentMethods extends Component {
                     </table>
 
                     <div className="mb-4 px-2">
-                        <button className="btn btn-outline-blue border-0 font-weight-bold shadow-none" onClick={() => this.setState({ isAddCardOpen: !this.state.isAddCardOpen })} >
+                        <button className="btn btn-outline-blue text-blue bg-transparent border-0 font-weight-bold shadow-none" onClick={() => this.setState({ isAddCardOpen: !this.state.isAddCardOpen })} >
                             {this.state.isAddCardOpen !== true ? <><span class="material-icons align-middle"> add </span></> : <><span class="material-icons align-middle">  remove</span></>}
                          Add payment method</button>
                     </div>
@@ -83,7 +83,7 @@ export default class PaymentMethods extends Component {
                             <div className="form-group">
                                 <div className="d-flex border rounded-8 justify-content-between overflow-hidden">
                                     <input className="border-0 shadow-none rounded-0   py-2  px-2  h-auto form-control" style={{ width: '100%' }} maxLength="16" type="text" defaultValue={'*****4819'} />
-                                    <input className="border-0 shadow-none rounded-0  py-2  px--2 h-auto form-control" style={{ width: '50px' }} type="text" placeholder="MM/YY" />
+                                    <input className="border-0 shadow-none rounded-0  py-2  px--2 h-auto form-control" style={{ width: '80px' }} type="text" placeholder="MM/YY" />
 
                                 </div>
                                 <small className="form-text text-muted d-none">We'll never share your email with anyone else.</small>

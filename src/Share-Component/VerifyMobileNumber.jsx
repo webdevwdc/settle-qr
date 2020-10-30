@@ -10,7 +10,10 @@ export default class VerifyMobileNumber extends Component {
     }
 
     onClose() {
-        this.setState({ showModal: false })
+        // this.setState({ showModal: false })
+
+        window.location.href = "/home"
+
     }
 
 
@@ -40,7 +43,11 @@ export default class VerifyMobileNumber extends Component {
                                 </div>
                             </div>
                             <div className="col-md-12 text-center">
-                                <button type="button" className="btn btn-primary btn-sm rounded-8 px-4" onClick={this.onClose.bind(this)}  >Confirm</button>
+                                <button
+                                    type="button"
+                                    className="btn btn-primary btn-sm rounded-8 px-4"
+                                    onClick={this.onClose.bind(this)}
+                                >Confirm</button>
                             </div>
                             <div className="col-md-12 pt-3">
                                 <p><small>If you have not recieved a code, click <a href="#" className="font-weight-bold">here</a> to recieve another one</small></p>

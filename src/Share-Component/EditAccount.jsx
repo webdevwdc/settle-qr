@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
 export default class EditAccount extends Component {
+    openOtp = () => {
+        this.props.verifyOtp(true);
+    }
     render() {
         return (
             <>
                 <div>
-                    <h5 className="text-dark1 text-center font-weight-bold">Edit Account</h5>
+                    <h5 className="text-dark1 text-center font-weight-bold mb-4">Edit Account</h5>
                     <form>
                         <div className="row">
 
@@ -26,10 +29,11 @@ export default class EditAccount extends Component {
                                 <div className="form-group">
                                     <div className="position-relative">
                                         <input type="text" placeholder="+1 418 555-0100" className="form-control shadow-none rounded-8" />
-                                        <button className="btn text-success position-absolute top-0 right-0 font-weight-bold">Verified</button>
+                                        <button className="btn text-success position-absolute shadow-none top-0 right-0 font-weight-bold py-1">verified</button>
                                     </div>
+                                    <small className="d-block text-dark1 pt-2">A 6 digit code will be sent to any new numbers for verification </small>
+
                                     <small className="form-text text-muted d-none">Error line never share your email with anyone else.</small>
-                                    <small className="d-block text-dark1 ">A 6 digit code will be sent to any new numbers for verification </small>
                                 </div>
                             </div>
 
@@ -42,8 +46,8 @@ export default class EditAccount extends Component {
 
 
 
-                            <div className="col-md-12 pt-4 text-center">
-                                <button className="btn btn-primary btn-sm rounded-8 px-4">Save</button>
+                            <div className="col-md-12 pt-3 text-center">
+                                <button type="button" className="btn btn-primary btn-sm rounded-8 px-5" onClick={() => this.openOtp()}>Save</button>
                             </div>
 
                         </div>

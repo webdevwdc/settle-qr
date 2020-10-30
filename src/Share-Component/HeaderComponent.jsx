@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import DefaultModal from '../Modals-Component'
 import CreateAccount from './CreateAccount'
 import LoginComponent from './LoginComponent'
 
-export default class HeaderComponent extends Component {
+class HeaderComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -17,6 +17,9 @@ export default class HeaderComponent extends Component {
         this.setState({ showModal: false })
     }
 
+    backRoute() {
+        this.props.history.goBack();
+    }
 
 
     render() {
@@ -25,7 +28,9 @@ export default class HeaderComponent extends Component {
                 <header className="position-sticky top-0 left-0 bg-white">
                     <div className="d-flex justify-content-between py-2 px-3">
                         <div className="backBtn ">
-                            <Link to="/home"><i className="material-icons text-dark2  align-middle">chevron_left</i></Link>
+                            <span
+                                onClick={() => this.backRoute()}
+                            ><i className="material-icons text-dark2  align-middle">chevron_left</i></span>
                         </div>
                         <div className="hamBergerBtn" onClick={() => this.setState({ isOpenMenu: !this.state.isOpenMenu })}>
                             <i className="material-icons align-middle">menu</i>
@@ -33,7 +38,7 @@ export default class HeaderComponent extends Component {
                     </div>
                 </header>
                 <div className={"sideMenuWrap border-0 rounded-0 vh-100 card border-0 position-fixed " + (this.state.isOpenMenu ? 'active' : '')} >
-                    <div className="bg-primary">
+                    <div className="bg-primary" onClick={() => window.location.href = "/home"}>
                         <p className="text-center mb-0 py-3 text-white font-weight-bold">Settle</p>
                     </div>
                     <div className="h-100 overflow-auto  ">
@@ -56,9 +61,9 @@ export default class HeaderComponent extends Component {
                                         </td>
                                         <td>
                                             <small className="font-weight-bold">Joseph Eshaq</small> <br />
-                                            <a className="d-block text-dark font-weight-bold" href="tel:+14185550100"><small className="font-weight-bold">+1 418 555-0100</small></a>
-                                            <a className="d-inline-block text-dark font-weight-bold" href="mailto:jeshaq@gmail.com"><small className="font-weight-bold">jeshaq@gmail.com</small></a>
-                                            <a className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></a>
+                                            <a className="d-block text-dark font-weight-bold" href="JavaScript:void(0)"><small className="font-weight-bold">+1 418 555-0100</small></a>
+                                            <a className="d-inline-block text-dark font-weight-bold" href="JavaScript:void(0)"><small className="font-weight-bold">jeshaq@gmail.com</small></a>
+                                            <Link to="/edit-account" className="d-inline-block font-weight-bold ml-3"><small className="font-weight-bold">Edit</small></Link>
                                         </td>
                                     </tr>
                                     <tr onClick={event => window.location.href = '/payment-methods'}>
@@ -71,7 +76,7 @@ export default class HeaderComponent extends Component {
                                             <small className="font-weight-bold">Payment Method</small>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr onClick={() => window.location.href = '/order-history'}>
                                         <td>
                                             <span className="material-icons">
                                                 assignment
@@ -102,7 +107,7 @@ export default class HeaderComponent extends Component {
 
                     </div>
                     <div className="card-footer text-center">
-                        <small className="font-weight-bold">© 2020 Settle QR.</small>
+                        <small className="font-weight-bold">© 2020 Settle Technologies.</small>
                     </div>
                 </div>
                 <div
@@ -120,3 +125,6 @@ export default class HeaderComponent extends Component {
         )
     }
 }
+
+
+export default withRouter(HeaderComponent);

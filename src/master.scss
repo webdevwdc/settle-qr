@@ -133,6 +133,41 @@ header {
             text-align: center;
             padding: 0 !important;
             text-align: center;
+            &:nth-of-type(1) {
+                &::after {
+                    content: "Not good";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(2) {
+                &::after {
+                    content: "Edible";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(3) {
+                &::after {
+                    content: "Good";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(4) {
+                &::after {
+                    content: "Yummy";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(5) {
+                &::after {
+                    content: "Mouthwatering";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
             svg {
                 width: 30px !important;
                 height: 30px !important;

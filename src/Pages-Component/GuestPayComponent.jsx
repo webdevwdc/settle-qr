@@ -85,12 +85,24 @@ export default class GuestPayComponent extends Component {
                 {/* Table Wraper End */}
 
                 <div className="chooseTops px-3">
-                    <h5 className="text-dark1 font-weight-bold">Tip</h5>
+                    <h5 className="text-dark1 font-weight-bold text-uppercase d-flex justify-content-between align-items-center mb-4">
+                        <span>Tip amount</span>
+                        <span>$0</span>
+                    </h5>
                     <div className="d-flex justify-content-between">
-                        <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>15%</button>
-                        <button className="btn btn-dark2 btn-lg text-white rounded-8" style={{ width: '94px' }}>18%</button>
-                        <button className="btn btn-dark2 btn-lg text-white rounded-8"
+                        <button
+                            className="btn btn-dark2 btn-lg text-white rounded-8"
                             style={{ width: '94px' }}
+                            onClick={() => this.setState({ isOpenOtherTip: false })}
+                        >15%</button>
+                        <button
+                            className="btn btn-dark2 btn-lg text-white rounded-8"
+                            style={{ width: '94px' }}
+                            onClick={() => this.setState({ isOpenOtherTip: false })}
+                        >18%</button>
+                        <button
+                            className={"btn  btn-lg text-white rounded-8 " + (this.state.isOpenOtherTip ? 'btn-primary' : 'btn-dark2')}
+                            style={{ width: '100px' }}
                             onClick={() => this.setState({ isOpenOtherTip: !this.state.isOpenOtherTip })}
                         >Other</button>
                     </div>
@@ -121,7 +133,7 @@ export default class GuestPayComponent extends Component {
                     }
 
 
-                    <p className="text-dark1 font-weight-bold mb-2 pt-4">Select Your Payment Method</p>
+                    <p className="text-dark1 font-weight-bold mb-2 pt-4">Select your payment method</p>
 
                     {/* Other Payment Method Start */}
 
@@ -129,7 +141,7 @@ export default class GuestPayComponent extends Component {
 
                     {/* Other Payment Method Start */}
                     <div className="d-flex flex-wrap justify-content-between pb-5">
-                        <button className="btn mb-3 btn-outline-secondary    btn-lg text-dark font-weight-bold rounded-8" onClick={() => this.setState({ isOtherPayment: !this.state.isOtherPayment })} style={{ width: '80px', fontSize: '1rem' }}>Other</button>
+                        <button className="btn mb-3 btn-outline-secondary    btn-lg text-dark font-weight-bold rounded-8" onClick={() => this.setState({ isOtherPayment: !this.state.isOtherPayment })} style={{ width: '100px', fontSize: '1rem' }}>Other</button>
                         <button className="btn mb-3 btn-outline-secondary   btn-lg text-dark font-weight-bold rounded-8 " style={{ width: 'auto', fontSize: '1rem' }}>Pay with Visa ***** 4819</button>
                         <Link to="/thanks" className="btn mb-3 btn-deep-dark btn-lg text-white rounded-8" style={{ width: '100px' }}>
                             <img style={{ height: '20px' }} src={ImagePath.applePay} alt={'Apple Pay'} />
